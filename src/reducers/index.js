@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { changeVid, CHANGE_VID, changeChannel, CHANGE_CHANNEL } from '../actions/index';
+import { changeVid, CHANGE_VID, changeShow, CHANGE_SHOW } from '../actions/index';
 const initialState = {
   data : {}
 };
@@ -10,19 +10,21 @@ export const videoReducer = (state = initialState, action) => {
         ...state,
         data: {
           ...state.data,
-          show: action.data.show,
-          src: action.data.src,
-          title: action.data.title
+          video: {
+            src: action.data.src,
+            title: action.data.title
+          }
         }
       };
-    case CHANGE_CHANNEL:
+    case CHANGE_SHOW:
       return {
         ...state,
         data: {
-          channel: action.data.channel,
           show: action.data.show,
-          src: action.data.src,
-          title: action.data.title
+          video: {
+            src: action.data.video.src,
+            title: action.data.video.title
+          }
         }
       }
     default: return state;

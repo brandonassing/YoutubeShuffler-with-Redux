@@ -26,7 +26,7 @@ class App extends Component {
         <MenuItems onClick={this.onClick}/>
         <Content style={{ padding: '0 100px', height:"100vh" }}>
           <div id="card">
-            <Frame src={this.state.src} title={this.state.title}/>
+            <Frame />
             <Shuffle show={this.state.show} onClick={this.onClick}/>
           </div>
         </Content>
