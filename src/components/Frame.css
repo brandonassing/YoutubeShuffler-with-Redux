@@ -1,0 +1,12 @@
+#frame-container{
+	text-align: center;
+	background-color: black;
+
+}
+iframe{
+	/*16:9 aspect ratio*/;
+	width:60vw;
+	height:33.75vw;
+	vertical-align:bottom
+
+}
