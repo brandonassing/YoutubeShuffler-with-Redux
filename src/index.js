@@ -12,6 +12,7 @@ import { changeVid, changeShow } from './actions/index';
 
 const store = createStore(rootReducer);
 window.store = store;
+console.log(store.getState());
 
 store.dispatch(changeShow({
   show: "The Office",

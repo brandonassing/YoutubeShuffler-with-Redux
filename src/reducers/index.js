@@ -1,9 +1,12 @@
 import { combineReducers } from 'redux'
 import { changeVid, CHANGE_VID, changeShow, CHANGE_SHOW } from '../actions/index';
-const initialState = {
-  data : {}
+const initialStateVideoReducer = {
+  data : {
+    show: "",
+    video : {}
+  }
 };
-export const videoReducer = (state = initialState, action) => {
+export const videoReducer = (state = initialStateVideoReducer, action) => {
   switch(action.type){
     case CHANGE_VID:
       return {
