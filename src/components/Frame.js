@@ -5,14 +5,12 @@ import { connect } from 'react-redux';
 const mapStateToProps = state => {
   return {
     video: state.videoReducer.data.video
-  }
-}
+  };
+};
 
 class Frame extends Component{
 	render(){
 		//var src = this.props.src + "?autoplay=1";
-    console.log("render frame");
-    console.log(this.props);
 		var src = this.props.video.src;
     var title = this.props.video.title;
 

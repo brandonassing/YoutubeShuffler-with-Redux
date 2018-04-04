@@ -7,6 +7,7 @@ const initialStateVideoReducer = {
   }
 };
 export const videoReducer = (state = initialStateVideoReducer, action) => {
+  console.log(action.data);
   switch(action.type){
     case CHANGE_VID:
       return {

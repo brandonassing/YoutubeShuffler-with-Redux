@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Layout, Menu } from 'antd';
 const { Header, Content, Footer } = Layout;
 
-export class MenuItems extends Component{
+export default class MenuItems extends Component{
 
   constructor(props){
     super(props);

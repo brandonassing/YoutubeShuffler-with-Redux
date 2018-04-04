@@ -1,9 +1,11 @@
 export const CHANGE_VID = "CHANGE_VID";
 export const CHANGE_SHOW = "CHANGE_SHOW";
 
-export const changeVid = video => ({
-  type: CHANGE_VID, data: video
+export const changeVid = vidData => ({
+  type: CHANGE_VID,
+  data: vidData
 });
-export const changeShow = newData => ({
-  type: CHANGE_SHOW, data: newData
+export const changeShow = showData => ({
+  type: CHANGE_SHOW,
+  data: showData
 });

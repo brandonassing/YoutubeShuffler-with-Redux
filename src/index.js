@@ -12,17 +12,6 @@ import { changeVid, changeShow } from './actions/index';
 
 const store = createStore(rootReducer);
 window.store = store;
-console.log(store.getState());
-
-store.dispatch(changeShow({
-  show: "The Office",
-  video: {
-    src: "https://www.youtube.com/embed/Vmb1tqYqyII",
-    title: "First Aid"
-  }
-
-}));
-
 ReactDOM.render(
   <Provider store={store}>
     <App />
