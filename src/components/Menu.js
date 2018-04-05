@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 import { Layout, Menu } from 'antd';
+import { connect } from 'react-redux';
+import { changeShow } from '../actions/index';
 const { Header, Content, Footer } = Layout;
 
-export default class MenuItems extends Component{
+const mapDispatchToProps = dispatch => {
+  return {
+    changeShow: showData => dispatch(changeShow(showData))
+  }
+}
+
+class MenuItems extends Component{
 
   constructor(props){
     super(props);
@@ -24,7 +32,13 @@ export default class MenuItems extends Component{
       newSrc = "https://www.youtube.com/embed/oH_Wk5HG0zM";
       newTitle = "Networking Tips";
     }
-    this.props.onClick(e.key, newSrc, newTitle);
+    this.props.changeShow({
+      show: e.key,
+      video: {
+        src: newSrc,
+        title: newTitle
+      }
+    });
   }
 
   render(){
@@ -47,3 +61,5 @@ export default class MenuItems extends Component{
       );
   }
 }
+
+export default connect (null, mapDispatchToProps)(MenuItems);
